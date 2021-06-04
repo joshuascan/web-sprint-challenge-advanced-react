@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-import axios from 'axios';
+import axios from "axios";
 
 import PlantList from "./components/PlantList";
 import ShoppingCart from "./components/ShoppingCart";
@@ -20,6 +20,14 @@ function App() {
   // remove a plant from the cart
   const removeFromCart = (plant) => {
     setCart(cart.filter((p) => p.id !== plant.id));
+  };
+
+  // dark mode toggle
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleMode = (e) => {
+    e.preventDefault();
+    setDarkMode(!darkMode);
   };
 
   return (
@@ -43,6 +51,12 @@ function App() {
                 </span>
               </NavLink>
             </li>
+            <div className="dark-mode__toggle">
+              <div
+                onClick={toggleMode}
+                className={darkMode ? "toggle toggled" : "toggle"}
+              />
+            </div>
           </ul>
         </nav>
         <Route
