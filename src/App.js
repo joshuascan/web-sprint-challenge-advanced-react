@@ -31,7 +31,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className={darkMode ? "dark-mode app" : "app"}>
       <Router>
         <nav className="container">
           <h1>
@@ -57,6 +57,7 @@ function App() {
                 className={darkMode ? "toggle toggled" : "toggle"}
               />
             </div>
+            <p>Dark Mode: {darkMode ? "ON" : "OFF"}</p>
           </ul>
         </nav>
         <Route

@@ -20,7 +20,7 @@ const CheckoutForm = (props) => {
     useForm(initialValue);
 
   return (
-    <>
+    <div className="checkout">
       <form onSubmit={handleSubmit}>
         <h2>Checkout Form</h2>
         <label>
@@ -79,7 +79,7 @@ const CheckoutForm = (props) => {
           </p>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
