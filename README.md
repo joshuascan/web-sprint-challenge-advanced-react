@@ -94,7 +94,7 @@ When completing these goals, make sure to use a **new branch** to ensure your MV
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
 - [ ] Add a filter input to the plant list page.
-- [ ] Build and implement another custom hook - a dark mode hook would be great for this project, though you'll have to style the light theme 🌙
+- [x] Build and implement another custom hook - a dark mode hook would be great for this project, though you'll have to style the light theme 🌙
 - [ ] Add a test file for the `ShoppingCart` component and test that it displays plants there (you'll need some mock plant data for the test, and then you can pass that data in as a prop when you call `render` and render the component - see the example below)
 
 ```js

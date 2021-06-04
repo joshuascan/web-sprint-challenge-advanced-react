@@ -6,6 +6,8 @@ import PlantList from "./components/PlantList";
 import ShoppingCart from "./components/ShoppingCart";
 import CheckoutForm from "./components/CheckoutForm";
 
+import useDarkMode from "./hooks/useDarkMode";
+
 import "./App.css";
 
 function App() {
@@ -23,12 +25,7 @@ function App() {
   };
 
   // dark mode toggle
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleMode = (e) => {
-    e.preventDefault();
-    setDarkMode(!darkMode);
-  };
+  const [darkMode, toggleMode] = useDarkMode();
 
   return (
     <div className={darkMode ? "dark-mode app" : "app"}>
