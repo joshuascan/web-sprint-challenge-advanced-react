@@ -25,7 +25,7 @@ function App() {
   };
 
   // dark mode toggle
-  const [darkMode, toggleMode] = useDarkMode();
+  const [darkMode, setDarkMode] = useDarkMode();
 
   return (
     <div className={darkMode ? "dark-mode app" : "app"}>
@@ -50,7 +50,7 @@ function App() {
             </li>
             <div className="dark-mode__toggle">
               <div
-                onClick={toggleMode}
+                onClick={setDarkMode}
                 className={darkMode ? "toggle toggled" : "toggle"}
               />
             </div>
